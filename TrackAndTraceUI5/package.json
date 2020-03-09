@@ -1,0 +1,15 @@
+{
+  "name": "TrackAndTraceUI5",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "@sap/grunt-sapui5-bestpractice-build": "1.4.2"
+  },
+  "dependencies": {
+    "@sap/approuter": "6.8.2"
+  },
+  "scripts": {
+    "start": "node node_modules/@sap/approuter/approuter.js",
+    "start:debugjwt": "node approuter"
+  }
+}

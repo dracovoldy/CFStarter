@@ -1,0 +1,7 @@
+{
+  "routes": [{
+    "source": "^/places",
+    "target": "/",
+    "destination": "places-destination"
+  }]
+}
