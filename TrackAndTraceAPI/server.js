@@ -57,4 +57,7 @@ http.createServer(function (req, res) {
   res.end("Hello World\n");
 }).listen(port);
 
+// app.listen(port, function () {
+//   console.log('mcapi listening on port ' + port);
+// });
 console.log("Server listening on port %d", port);

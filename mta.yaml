@@ -11,24 +11,24 @@ modules:
       - name: TrackAndTraceAPI_api
         properties:
           url: '${default-url}'
-    properties:
-      disk-quota: 128M
+    parameters:
+      disk-quota: 512M
       memory: 128M
   - name: TrackAndTraceUI5
     type: html5
     path: TrackAndTraceUI5
-    parameters:
-      disk-quota: 128M
-      memory: 128M
     build-parameters:
-      ignore: ["node_modules/"]
+      ignore:
+        - node_modules/
       builder: grunt
     requires:
-     - name: TrackAndTraceAPI_api
-       group: destinations
-       properties:
+      - name: TrackAndTraceAPI_api
+        group: destinations
+        properties:
           forwardAuthToken: false
           strictSSL: false
           name: TrackAndTraceAPI_api
-          url: ~{url}
-
+          url: '~{url}'
+    parameters:
+      disk-quota: 512M
+      memory: 128M

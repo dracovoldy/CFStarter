@@ -1,11 +1,24 @@
 <mvc:View controllerName="TrackAndTrace.TrackAndTraceUI5.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 	<Shell id="shell">
-		<App id="app">
-			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content></content>
-				</Page>
-			</pages>
-		</App>
+		<App>
+		<pages>
+			<Page title="Shipment Track and Trace">
+				<content>
+						<f:SimpleForm id="simpleFormChange"
+							editable="true"
+							class="editableFormsapUiSmallMarginTopBottom">
+							<f:content>
+								<Label text="Purchase Order"/>
+								<Input id="po" width="100px"/>
+								<Label text="OR"></Label>
+								<Label text="Airway Bill"/>
+								<Input id="awb" width="100px"/>
+								<Button text="Go" id="go"/>
+							</f:content>
+						</f:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
 	</Shell>
 </mvc:View>
