@@ -4,14 +4,14 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
-// const passport = require('passport');
-// const { JWTStrategy } = require('@sap/xssec');
-// const xsenv = require('@sap/xsenv');
+const passport = require('passport');
+const { JWTStrategy } = require('@sap/xssec');
+const xsenv = require('@sap/xsenv');
 
-// passport.use(new JWTStrategy(xsenv.getServices({uaa:{tag:'xsuaa'}}).uaa));
+passport.use(new JWTStrategy(xsenv.getServices({uaa:{tag:'xsuaa'}}).uaa));
 
-// app.use(passport.initialize());
-// app.use(passport.authenticate('JWT', { session: false }));
+app.use(passport.initialize());
+app.use(passport.authenticate('JWT', { session: false }));
 
 var http = require("http");
 

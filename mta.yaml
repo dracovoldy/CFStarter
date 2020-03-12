@@ -14,6 +14,9 @@ modules:
     parameters:
       disk-quota: 512M
       memory: 128M
+    requires:
+      - name: track-and-trace-uaa
+
   - name: TrackAndTraceUI5
     type: html5
     path: TrackAndTraceUI5
@@ -22,13 +25,20 @@ modules:
         - node_modules/
       builder: grunt
     requires:
+      - name: track-and-trace-uaa
       - name: TrackAndTraceAPI_api
         group: destinations
         properties:
-          forwardAuthToken: false
+          forwardAuthToken: true
           strictSSL: false
           name: TrackAndTraceAPI_api
           url: '~{url}'
     parameters:
       disk-quota: 512M
       memory: 128M
+resources:
+  - name: track-and-trace-uaa
+    parameters:
+      path: security/xs-security.json
+      service-plan: application
+    type: com.sap.xs.uaa

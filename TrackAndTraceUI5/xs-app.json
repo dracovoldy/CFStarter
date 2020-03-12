@@ -11,28 +11,7 @@
       "destination": "TrackAndTraceAPI_api"
     },
     {
-      "source": "/admin/(.*)$",
-      "target": "/admin/$1",
-      "destination": "srv_api",
-      "csrfProtection": true,
-      "authenticationType": "xsuaa"
-    },
-    {
-      "source": "/api/(.*)$",
-      "target": "/api/$1",
-      "destination": "srv_api",
-      "csrfProtection": true,
-      "authenticationType": "xsuaa"
-    },
-    {
-      "source": "/acatalog/(.*)$",
-      "target": "/acatalog/$1",
-      "destination": "srv_api",
-      "csrfProtection": true,
-      "authenticationType": "xsuaa"
-    },
-    {
-      "source": "^/appadmin/(.*)$",
+      "source": "^/TrackAndTraceUI5/(.*)$",
       "target": "$1",
       "localDir": "webapp"
     }

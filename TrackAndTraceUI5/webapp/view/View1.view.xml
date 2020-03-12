@@ -1,4 +1,4 @@
-<mvc:View controllerName="TrackAndTrace.TrackAndTraceUI5.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View controllerName="TrackAndTrace.TrackAndTraceUI5.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
 	<Shell id="shell">
 		<App>
 		<pages>
