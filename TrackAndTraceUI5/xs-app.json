@@ -7,7 +7,7 @@
   "routes": [
     {
       "source": "/v2/(.*)$",
-      "target": "/v2/$1",
+      "target": "$1",
       "destination": "TrackAndTraceAPI_api"
     },
     {

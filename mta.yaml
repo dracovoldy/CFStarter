@@ -36,6 +36,8 @@ modules:
     parameters:
       disk-quota: 512M
       memory: 128M
+    env:
+      SEND_XFRAMEOPTIONS: false
 resources:
   - name: track-and-trace-uaa
     parameters:
